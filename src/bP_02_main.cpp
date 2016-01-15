@@ -1,9 +1,8 @@
 //============================================================================
-// Name        : ECLIPSE_MARS_PROJECT_CPP11.cpp
+// Name        : bP_02_main.cpp
 // Author      : Francesco Forcher
-// Version     : 0.1
-// Copyright   : All rights reserved © 2015
-// Description : Hello World in C++, Ansi-style
+// Version     : 1.1
+// Description : Modify Plot_v02 and use a factory to create data analyzers
 //============================================================================
 
 #include <vector>
