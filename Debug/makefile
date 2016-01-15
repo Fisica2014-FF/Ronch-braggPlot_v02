@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/cpp/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk
@@ -38,19 +39,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: ECLIPSE_MARS_PROJECT_CPP14
+all: Ronch_braggPlot_v02
 
 # Tool invocations
-ECLIPSE_MARS_PROJECT_CPP14: $(OBJS) $(USER_OBJS)
+Ronch_braggPlot_v02: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "ECLIPSE_MARS_PROJECT_CPP14" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ $(OBJS) $(USER_OBJS) $(LIBS) -L~/ROOT/ROOT_6_06_00/lib -lCore -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -pthread -lm -ldl -rdynamic -o "Ronch_braggPlot_v02"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) ECLIPSE_MARS_PROJECT_CPP14
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) Ronch_braggPlot_v02
 	-@echo ' '
 
 .PHONY: all clean dependents

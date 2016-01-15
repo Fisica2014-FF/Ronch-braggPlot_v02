@@ -1,12 +1,9 @@
-#include "EventSim.h"
+#include "../EventSim.h"
 
-#include "Event.h"
-
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <stdlib.h>
 #include <math.h>
+#include <random>
+
+#include "../Event.h"
 
 using namespace std;
 
